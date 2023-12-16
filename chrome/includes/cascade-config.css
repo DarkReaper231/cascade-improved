@@ -7,7 +7,7 @@
 
   /*  Global Border Radius
    *  applied to ALL UI elements
-   */ --uc-border-radius: 0px;
+   */ --uc-border-radius: 3px;
 
 
   /*  The distance the Statuspanel floats
@@ -24,10 +24,10 @@
 
 #pageActionButton { display: none !important; }
 
-#PanelUI-menu-button { padding: 0px !important; }
-#PanelUI-menu-button .toolbarbutton-icon { width: 1px !important; }
-#PanelUI-menu-button .toolbarbutton-badge-stack { padding: 0px !important; }
-
+/* #PanelUI-menu-button { padding: 0px !important; }
+ * #PanelUI-menu-button .toolbarbutton-icon { width: 1px !important; }
+ * #PanelUI-menu-button .toolbarbutton-badge-stack { padding: 0px !important; }
+ */
 
 
 
@@ -87,8 +87,9 @@
 
 
 /* Disable the Navigation Buttons */
-#back-button,
-#forward-button { display: none !important; }
+/* #back-button, */
+/* #forward-button { display: none !important; } */
+
 
 /* Disables the Tracking Protection Shield */
 /* #tracking-protection-icon-container { display: none !important; } */
@@ -106,9 +107,13 @@
 #urlbar-go-button { display: none !important; }
 
 /* Hides the Extensions Menu Icon */
-#unified-extensions-button { display: none !important; }
-
-
+/* #unified-extensions-button { display: none !important; }
+ */
+#unified-extensions-button[attention]
+  > .toolbarbutton-icon, .unified-extensions-item[attention]
+  > .unified-extensions-item-action-button.toolbarbutton-1
+  > .toolbarbutton-badge-stack, .unified-extensions-item[attention]
+  > .unified-extensions-item-action-button.subviewbutton { background-image: none !important; }
 
 
 
@@ -124,18 +129,17 @@
    */ --uc-active-tab-width:   clamp(100px, 30vw, 300px);
       --uc-inactive-tab-width: clamp(100px, 20vw, 200px);
 
-
   /*  Enable this to always show the Tab Close button
    *  possible values:
    *  show: -moz-inline-block
    *  hide: none
-   */ --show-tab-close-button: none;
+   */ --show-tab-close-button: -moz-inline-block;
 
   /*  Enable this to only show the Tab Close button on tab hover
    *  possible values:
    *  show: -moz-inline-block
    *  hide: none
-   */ --show-tab-close-button-hover: none;
+   */ --show-tab-close-button-hover: -moz-inline-block;
 
   /*  Hide the all Tabs button from the Tab Bar
    *  possible values:

@@ -9,6 +9,12 @@
 
 
 
+window,
+#main-window  {
+  font-family: "Dejavu Sans Mono" !important;
+  font-size: 12px !important;
+}
+
 
 #main-window,
 #toolbar-menubar,

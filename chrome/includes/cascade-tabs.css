@@ -7,19 +7,27 @@
 /* Hides the list-all-tabs button*/
 #alltabs-button { display: var(--uc-show-all-tabs-button) !important; }
 
-
 /* remove tab shadow */
 .tabbrowser-tab
   >.tab-stack
-  > .tab-background { box-shadow: none !important;  }
+  > .tab-background { box-shadow: none !important; margin-block: 4px !important;  }
 
+/* fix padding */
+.tabbrowser-tab {
+  padding: 0px 0px 0px 4px !important;
+}
+
+#TabsToolbar .toolbarbutton-1 { padding-left: 4px !important; }
 
 /* multi tab selection */
 #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([multiselected])
   > .tab-stack
-  > .tab-background:-moz-lwtheme { outline-color: var(--toolbarseparator-color) !important; }
+  > .tab-background:-moz-lwtheme { outline-color: transparent !important; }
 
 
+#TabsToolbar #firefox-view-button[open]:not(:focus-visible)
+  > .toolbarbutton-icon:-moz-lwtheme,
+    .tab-background[selected]:not([multiselected]):-moz-lwtheme { outline-color: transparent !important; }
 
 
 
